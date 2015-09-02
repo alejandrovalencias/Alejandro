@@ -61,7 +61,7 @@ class Config
         $this->password = 'pass';
         $this->serverPath = '';
         $this->errors = array(
-            0 => "Error: Formato  inv&aacute;lido <br />",
+            0 => "Error: Campo requerido <br />",
             1 => "Error: La ruta del servidor ingresada no existe  <br />"
 
         );

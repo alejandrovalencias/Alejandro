@@ -14,7 +14,7 @@ if ((bool)$params['query'] === true) {
     $arrData = $params['data'];
     if (count($arrData) > 0) {
         ?>
-        <table border="1">
+        <table summary="Resultados de la validación" id="newspaper-a">
             <thead>
             <th>Id</th>
             <th>Nombre</th>
@@ -35,5 +35,19 @@ if ((bool)$params['query'] === true) {
     <?php
     }
 }
-
 ?>
+<?php
+if (isset($params['error']) && count($params['error']) > 0) {
+    ?>
+    <div class="error">
+        <?php
+        foreach ($params['error'] as $error) {
+            ?>
+            <p><?php echo $error; ?></p>
+        <?php
+        }?>
+    </div>
+<?php
+}
+?>
+<link rel="stylesheet" type="text/css" href="css/style.css"/>
